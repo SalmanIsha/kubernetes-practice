@@ -28,6 +28,7 @@ Then you can join any number of worker nodes by running the following on each as
 
 kubeadm join 192.168.3.106:6443 --token r9vvi7.4za00tirlz8nbx6h \  
     --discovery-token-ca-cert-hash sha256:c4282b1525bc5da5f9404d46218273a83d70c2bac6e5a5207c37fea6f4a518f1  
+    ```
 
 `mkdir -p $HOME/.kube`  
 `sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config`  
@@ -35,7 +36,7 @@ kubeadm join 192.168.3.106:6443 --token r9vvi7.4za00tirlz8nbx6h \
 
 `export kubever=$(kubectl version | base64 | tr -d '\n')`  
 `kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$kubever"`  
-```  
+  
 On worker nodes run below command to join the cluster( copied from above output):
 
 
