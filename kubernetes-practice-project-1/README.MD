@@ -12,24 +12,24 @@ SA-Logic: a python application that performs Sentiment Analysis.
 
 To run SA-Frontend:
 
-kubectl apply -f sa-frontend-deployment.yaml
+`kubectl apply -f sa-frontend-deployment.yaml`
 
 To run SA-Frontend service:
 
-kubectl apply -f service-sa-frontend-lb.yaml 
+`kubectl apply -f service-sa-frontend-lb.yaml `
 
 To run SA-WebApp:
 
-kubectl apply -f sa-web-app-deployment.yaml
+`kubectl apply -f sa-web-app-deployment.yaml`
 
 To run SA-WebApp service:
 
-kubectl apply -f service-sa-web-app-lb.yaml 
+`kubectl apply -f service-sa-web-app-lb.yaml `
 
 To run SA-Logic:
 
-kubectl apply -f sa-logic-deployment.yaml
+`kubectl apply -f sa-logic-deployment.yaml`
 
 To run SA-Logic service:
 
-kubectl apply -f service-sa-logic.yaml 
+`kubectl apply -f service-sa-logic.yaml `
