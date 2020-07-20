@@ -1,15 +1,35 @@
 # Project Sentiment Analyzer  
 
-## Complete project all the way from building to orchestration.  
+The application has one functionality.  
+It takes one sentence as input. Using Text Analysis, calculates the emotion of the sentence.  
 
-Forked from: https://github.com/rinormaloku/k8s-mastery.git  
+From the technical perspective, the application consists of three microservices.  
+Each has one specific functionality:
 
-We will do this project in 3 steps.  
+SA-Frontend: a Nginx web server that serves ReactJS static files.  
+SA-WebApp: a Java Web Application that handles requests from the frontend.  
+SA-Logic: a python application that performs Sentiment Analysis. 
 
-Step 1: Build and run the total application in local computer  
+To run SA-Frontend:
 
-Step 2: Made a dockerized version of the project.  
+kubectl apply -f sa-frontend-deployment.yaml
 
-Step 3: At then end we will move the project to kubernetes.  
+To run SA-Frontend service:
 
-Go to SA-FRONTEND, SA-WEBAPP, SA-LOGIC folder for additional steps of setup.
+kubectl apply -f service-sa-frontend-lb.yaml 
+
+To run SA-WebApp:
+
+kubectl apply -f sa-web-app-deployment.yaml
+
+To run SA-WebApp service:
+
+kubectl apply -f service-sa-web-app-lb.yaml 
+
+To run SA-Logic:
+
+kubectl apply -f sa-logic-deployment.yaml
+
+To run SA-Logic service:
+
+kubectl apply -f service-sa-logic.yaml 
